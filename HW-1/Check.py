@@ -30,10 +30,10 @@ def accuracy(orig, pred):
     	return
     match = 0
     for i in range(len(orig)):
-	o_label = orig[i]
-	p_label = pred[i]
-	if(o_label == p_label):
-	    match += 1
+	    o_label = orig[i]
+	    p_label = pred[i]
+	    if(o_label == p_label):
+	        match += 1
     print('***************\nAccuracy: ' + str(float(match)/num) + '\n***************')
 
 

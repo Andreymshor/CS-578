@@ -26,8 +26,9 @@ def accuracy(orig, pred):
     
     num = len(orig)
     if(num != len(pred)):
-	print('Error!! Num of labels are not equal.')
-    	return
+        print('Error!! Num of labels are not equal.')
+        print(f"length of original: {num}. length of Predicted: {len(pred)}")
+        return
     match = 0
     for i in range(len(orig)):
 	    o_label = orig[i]
@@ -51,8 +52,8 @@ def readfile(filename):
 if __name__ == '__main__':
 
     import Solution as sl
-    labels = sl.DecisionTree()
+    labels = sl.DecisionTreeBounded(12)
     if labels == None or len(labels) != 4:
-	   print('\nError: DecisionTree Return Value.\n')
+        print('\nError: DecisionTree Return Value.\n')
     else:
-	   eval(labels[0],labels[1],labels[2],labels[3])
+        eval(labels[0],labels[1],labels[2],labels[3])
